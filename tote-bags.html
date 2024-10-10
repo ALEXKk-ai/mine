@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tote Bags - Liz Unique Designs</title>
+    <style>
+        /* Header Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #004d40; /* Midnight green */
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 16px;
+            margin: 0;
+        }
+        header a {
+            color: white;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+        /* Image Grid Section */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 columns layout */
+            gap: 10px; /* Grey line separating images */
+            padding: 20px;
+            justify-items: center; /* Centering images */
+        }
+        .image-container {
+            width: 150px; /* Reduced width */
+            height: 250px; /* Slightly increased height */
+            border: 1px solid grey; /* Thin grey border between rectangles */
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .image-container img {
+            width: 100%;
+            height: 75%; /* Takes 3/4 of the height */
+            object-fit: contain; /* Ensures images fit inside without cropping */
+        }
+        .info-section {
+            height: 25%; /* Takes 1/4 of the height */
+            background-color: white;
+            text-align: center;
+            padding-top: 5px;
+        }
+        /* Footer Removed */
+        /* Responsive Design for Mobile */
+        @media (max-width: 600px) {
+            .image-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns even on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Liz Unique Designs</h1>
+        <a href="index.html">Home</a>
+    </header>
+
+    <!-- Tote Bags Section (2x3 Grid with 9 Images and Info Section) -->
+    <section class="image-grid">
+        <div class="image-container">
+            <img src="images/tote-bag1.jpg" alt="Tote Bag 1">
+            <div class="info-section">
+                <!-- Additional Information Goes Here -->
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="images/tote-bag2.jpg" alt="Tote Bag 2">
+            <div class="info-section">
+                <!-- Additional Information Goes Here -->
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="images/tote-bag3.jpg" alt="Tote Bag 3">
+            <div class="info-section">
+                <!-- Additional Information Goes Here -->
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="images/tote-bag4.jpg" alt="Tote Bag 4">
+            <div class="info-section">
+                <!-- Additional Information Goes Here -->
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="images/tote-bag5.jpg" alt="Tote Bag 5">
+            <div class="info-section">
+                <!-- Additional Information Goes Here -->
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="images/tote-bag6.jpg" alt="Tote Bag 6">
+            <div class="info-section">
+                <!-- Additional Information Goes Here -->
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="images/tote-bag7.jpg" alt="Tote Bag 7">
+            <div class="info-section">
+                <!-- Additional Information Goes Here -->
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="images/tote-bag8.jpg" alt="Tote Bag 8">
+            <div class="info-section">
+                <!-- Additional Information Goes Here -->
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="images/tote-bag9.jpg" alt="Tote Bag 9">
+            <div class="info-section">
+                <!-- Additional Information Goes Here -->
+            </div>
+        </div>
+    </section>
+</body>
+</html>

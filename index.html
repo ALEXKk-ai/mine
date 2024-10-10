@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liz Unique Designs</title>
+    <style>
+        /* Body and basic layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        /* Header style */
+        header {
+            background-color: #004953; /* Midnight green */
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid black;
+            position: relative;
+        }
+
+        header h1 {
+            color: white;
+            font-size: 16px;
+            margin: 0;
+        }
+
+        /* Hamburger menu style */
+        .hamburger {
+            font-size: 24px;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            color: white;
+        }
+
+        /* Sub-categories dropdown menu */
+        .sub-categories {
+            display: none;
+            position: absolute;
+            top: 100px;
+            right: 0;
+            background-color: white;
+            border: 1px solid black;
+            padding: 10px;
+            width: 150px;
+            font-size: 13px;
+            z-index: 1;
+        }
+
+        .hamburger.active + .sub-categories {
+            display: block;
+        }
+
+        .sub-categories a {
+            display: block;
+            margin-top: 5px;
+            color: blue;
+            text-decoration: none;
+        }
+
+        .sub-categories a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section for the image */
+        .image-section {
+            position: relative;
+            height: 300px; /* Adjust height as needed */
+            width: 100%;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Text overlay on image */
+        .text-overlay {
+            position: absolute;
+            top: 0;
+            left: 20px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .text-overlay p {
+            margin: 5px 0;
+        }
+
+        .text-overlay .bold {
+            font-weight: bold;
+        }
+
+        .text-overlay .italic {
+            font-style: italic;
+            font-size: 12px;
+        }
+
+        /* Centered text and bell */
+        .centered-text {
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: white;
+        }
+
+        .centered-text .shop-now {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .bell {
+            font-size: 30px;
+            animation: ring 1.5s infinite;
+        }
+
+        @keyframes ring {
+            0% { transform: rotate(0); }
+            25% { transform: rotate(-15deg); }
+            50% { transform: rotate(15deg); }
+            75% { transform: rotate(-15deg); }
+            100% { transform: rotate(0); }
+        }
+
+        /* Beige section */
+        .beige-section {
+            background-color: #fff8e7;
+            padding: 20px;
+        }
+
+        .products-heading {
+            text-align: center;
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        /* Image grid */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, auto);
+            gap: 20px;
+            justify-items: center;
+            margin: 20px 0;
+            background-color: #fff8e7;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .image-grid-item img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+
+        .image-grid-item p {
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* Location section */
+        .location-section {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Liz Unique Designs</h1>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <div class="sub-categories">
+            <a href="jumpsuits.html">Jumpsuits</a>
+            <a href="baby-dresses.html">Baby Dresses</a>
+            <a href="curtains.html">Curtains</a>
+            <a href="bikinis.html">Bikinis</a>
+            <a href="hoodies.html">Hoodies</a>
+            <a href="tote-bags.html">Tote Bags</a>
+            <a href="sweat-pants.html">Sweat Pants</a>
+            <a href="bucket-hats.html">Bucket Hats</a>
+        </div>
+    </header>
+
+    <!-- Image section with text overlay -->
+    <div class="image-section">
+        <img src="images/curtain.jpg" alt="Curtain Image">
+        <div class="text-overlay">
+            <p>Find your</p>
+            <p class="bold">Perfect</p>
+            <p>Fit</p>
+            <p class="italic">just for you</p>
+        </div>
+        <!-- Centered text and bell -->
+        <div class="centered-text">
+            <div class="shop-now">Shop with us!!</div>
+            <div class="bell">🔔</div>
+        </div>
+    </div>
+
+    <!-- Beige section for products -->
+    <div class="beige-section">
+        <div class="products-heading">Our Products</div>
+        <div class="image-grid">
+            <div class="image-grid-item">
+                <a href="jumpsuits.html"><img src="images/jumpsuit.jpg" alt="Jumpsuit"></a>
+                <p>Jumpsuits</p>
+            </div>
+            <div class="image-grid-item">
+                <a href="baby-dresses.html"><img src="images/baby-dress.jpg" alt="Baby Dresses"></a>
+                <p>Baby Dresses</p>
+            </div>
+            <div class="image-grid-item">
+                <a href="curtains.html"><img src="images/curtains.jpg" alt="Curtains"></a>
+                <p>Curtains</p>
+            </div>
+            <div class="image-grid-item">
+                <a href="bikinis.html"><img src="images/bikinis.jpg" alt="Bikinis"></a>
+                <p>Bikinis</p>
+            </div>
+            <div class="image-grid-item">
+                <a href="hoodies.html"><img src="images/hoodies.jpg" alt="Hoodies"></a>
+                <p>Hoodies</p>
+            </div>
+            <div class="image-grid-item">
+                <a href="tote-bags.html"><img src="images/tote-bags.jpg" alt="Tote Bags"></a>
+                <p>Tote Bags</p>
+            </div>
+            <div class="image-grid-item">
+                <a href="sweat-pants.html"><img src="images/sweat-pants.jpg" alt="Sweat Pants"></a>
+                <p>Sweat Pants</p>
+            </div>
+            <div class="image-grid-item">
+                <a href="bucket-hats.html"><img src="images/bucket-hats.jpg" alt="Bucket Hats"></a>
+                <p>Bucket Hats</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Location section -->
+    <div class="location-section">
+        <p>Location:</p>
+        <p>Liz Unique Designs - Kasarani Opposite Shell Petrol Station</p>
+        <p>Ground Floor</p>
+        <p>Call Us: 0722930664</p>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.hamburger').classList.toggle('active');
+            document.querySelector('.sub-categories').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

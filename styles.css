@@ -1,0 +1,104 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Section */
+header {
+    text-align: center; /* Center the header content */
+    background-color: white; /* White background for the header */
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2rem; /* Reduced font size for the title */
+    color: red; /* Red font color for the title */
+    margin-bottom: 10px; /* Space between the title and categories */
+}
+
+.categories-container {
+    position: relative;
+    text-align: center;
+}
+
+/* Styling the "All categories" link */
+.categories-link-container {
+    display: inline-block; /* Inline-block for centered alignment */
+}
+
+.categories-link {
+    color: #333; /* Dark color for the link */
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 10px 20px; /* Padding for rectangular shape */
+    border-radius: 25px; /* Curved edges */
+    background-color: #f4f4f4; /* Light background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s ease;
+}
+
+.categories-link:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Subtle hover effect */
+}
+
+/* Subcategories */
+.subcategories {
+    display: none; /* Initially hidden */
+    background-color: #fff;
+    position: fixed; /* Fixed position to center it */
+    width: 100%;
+    top: 50%; /* Center it vertically */
+    left: 50%; /* Center it horizontally */
+    transform: translate(-50%, -50%); /* Translate to fully center */
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    z-index: 1;
+}
+
+.subcategories a {
+    display: block;
+    color: #333;
+    padding: 5px;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.subcategories a:hover {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+/* Line separating header from the rest of the site */
+hr {
+    margin-top: 10px;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+/* Orange section below the header */
+.orange-section {
+    background-color: orange; /* Solid orange background below header */
+    height: 300px; /* Double the previous height */
+    width: 100%;
+}
+
+/* Toggle subcategories visibility */
+.subcategories.show {
+    display: block;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .subcategories {
+        text-align: center;
+    }
+}
